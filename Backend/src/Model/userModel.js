@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema({
     isVarify:{
         type:Boolean,
         default:false
+    },
+    phone:{
+        type:Number,
+        required:true
     }
 },{timestamps:true})
 

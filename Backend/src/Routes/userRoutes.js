@@ -1,12 +1,13 @@
 import express from 'express'
-import {addUser,userLogin, sendOtp, submitOTp,otpVarification} from '../Controllers/userController.js'
+import {addUser,userLogin, sendOtp, submitOtp,otpVarification,updateUserPassword} from '../Controllers/userController.js'
 const userRouter = express.Router()
 
 userRouter.post('/register', addUser);
 userRouter.post('/login',userLogin)
 userRouter.post('/sendOtp',sendOtp)
-userRouter.patch('/submitOtp',submitOTp)
+userRouter.post('/submitOtp',submitOtp)
 userRouter.patch('/otpVarification',otpVarification)
+userRouter.patch('/updateUserPassword',updateUserPassword)
 
     
 export default  userRouter
